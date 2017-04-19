@@ -1,1 +1,40 @@
-{     "devDependencies": {         "mongoose-text-search": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-mongoose-text-search",     "homepage": "https://github.com/npmtest/node-npmtest-mongoose-text-search",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-mongoose-text-search.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [mongoose-text-search (v0.0.2)](https://github.com/aheckmann/mongoose-text-search#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-mongoose-text-search.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-mongoose-text-search) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-mongoose-text-search.svg)](https://travis-ci.org/npmtest/node-npmtest-mongoose-text-search)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "mongoose-text-search": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-mongoose-text-search",
+    "keywords": [
+        "coverage",
+        "test",
+        "mongoose-text-search"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_mongoose_text_search.js",
+    "name": "npmtest-mongoose-text-search",
+    "nameAlias": "npmtest_mongoose_text_search",
+    "nameOriginal": "npmtest-mongoose-text-search",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-mongoose-text-search.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
